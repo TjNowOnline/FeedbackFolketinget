@@ -35,7 +35,6 @@ const personSchema = new mongoose.Schema({
     toObject: { virtuals: true }
 });
 
-// Index for faster querying on commonly searched fields
 personSchema.index({ name: 1, party: 1, position: 1 });
 
 const Person = mongoose.model('Person', personSchema);
